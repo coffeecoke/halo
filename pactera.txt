@@ -3,8 +3,14 @@ git status
 git add 
 git commit
 git push
+<<<<<<< HEAD
 
 lalalal
 
 zhaoqian
 
+=======
+git branch 名称   创建分支
+git checkout branch   切换分支
+git checkout -b name   创建并切换分支
+>>>>>>> feature
