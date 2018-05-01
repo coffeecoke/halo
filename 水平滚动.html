@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <style type="text/css">
+    .stage{width:300px;height:40px;border:solid 1px #ccc;position:relative;overflow:hidden;}
+    .stage .slide{position:absolute;top:0;left:0;}
+    </style>
+    <body>
+    <div class="stage">
+        <div class="slide">
+            <p>你还阿杜房间打开开发能够覅个糊放入房间都能减dhiuwefhu地方你就色粉色减肥呢飞机文或肥减肥经济</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+    var bigbox=$(".stage").width();
+    var twobox=$(".stage .slide").width();
+    var clonetime=Math.random(bigbox/twobox);
+    if(clonetime<1){
+        clonetime=1;
+    }
+    console.log(clonetime)
+    var maxleft=-1*twobox;
+    console.log(maxleft)
+    for(var i=0;i<clonetime;i++){
+        $(".stage .slide").append($(".stage .slide p").clone());
+    }
+    function moveLeft(){
+        if(parseInt($(".stage .slide").css("left"))<=maxleft){
+            $(".stage .slide").css("left",0);
+        }
+        $(".stage .slide").stop().animate({
+                    left:"-=5"
+                },40,"linear",function(){
+                    moveLeft();
+                })
+    }
+    moveLeft();
+    </script>
+    </body>
+</html>
