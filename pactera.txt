@@ -6,3 +6,5 @@ git push
 git branch 名称   创建分支
 git checkout branch   切换分支
 git checkout -b name   创建并切换分支
+git commit --amend  修复最新commit错误
+git rebase -i HEAD^^  修复倒数第二个错误
